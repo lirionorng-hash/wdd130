@@ -1,0 +1,63 @@
+cat > estilos/estilos.css << 'EOF'
+/* Estilos para a Página Inicial - WDD 130 */
+
+/* Navegação */
+nav {
+    background-color: #333;
+    padding: 10px;
+}
+
+nav a {
+    color: #fff;
+    padding: 10px;
+    display: block;
+}
+
+/* Limitar a largura do main */
+main {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Título principal */
+h1 {
+    color: #333;
+}
+
+/* Imagem do main */
+main img {
+    width: 150px;
+    height: auto;
+    border: 1px solid #ccc;
+    padding: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo do aside */
+aside {
+    width: 300px;
+    margin: 20px auto;
+    border: 1px solid #ccc;
+    padding: 15px;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+/* Imagem do aside */
+aside img {
+    width: 200px;
+    height: auto;
+}
+
+/* Parágrafos */
+p {
+    padding: 0;
+}
+
+/* Rodapé */
+footer {
+    margin-top: 20px;
+    border-top: 1px solid #ccc;
+    text-align: center;
+}
+EOF
