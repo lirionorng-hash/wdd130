@@ -1,4 +1,3 @@
-cat > estilos/estilos.css << 'EOF'
 /* Estilos para a Página Inicial - WDD 130 */
 
 /* Navegação */
@@ -60,4 +59,3 @@ footer {
     border-top: 1px solid #ccc;
     text-align: center;
 }
-EOF
