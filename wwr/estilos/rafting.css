@@ -1,0 +1,156 @@
+/* ===== Variáveis CSS ===== */
+:root {
+    --cor-primaria: #0b5394;
+    --cor-destaque1: #1a1a2e;
+    --cor-destaque2: #e8f0fe;
+    --fonte-titulo: 'Georgia', serif;
+    --fonte-body: 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* ===== Reset do box-model ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===== Estilo do body ===== */
+body {
+    font-family: var(--fonte-body);
+    color: var(--cor-destaque1);
+}
+
+/* ===== Largura e centralização ===== */
+header, main, footer {
+    width: 840px;
+    margin: 0 auto;
+}
+
+/* ===== Títulos ===== */
+h1, h2 {
+    font-family: var(--fonte-titulo);
+    color: var(--cor-primaria);
+    text-align: center;
+}
+
+/* ===== Margens e paddings básicos ===== */
+nav, p, section, article {
+    margin: 16px;
+    padding: 8px;
+}
+
+/* ===== Header ===== */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+}
+
+header .logo {
+    width: 120px;
+    height: auto;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 16px;
+}
+
+header nav a {
+    text-decoration: none;
+    color: var(--cor-primaria);
+    font-weight: bold;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+/* ===== Hero div ===== */
+.hero {
+    position: relative;
+}
+
+.hero img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* ===== Hero h1 (sobreposição) ===== */
+.hero h1 {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    padding: 16px;
+    text-align: center;
+    opacity: 0.7;
+    background-color: var(--cor-destaque1);
+    color: #ffffff;
+    font-size: 1.8rem;
+}
+
+/* ===== Hero article (sobreposição) ===== */
+.hero article {
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 16px;
+    border-radius: 8px;
+    max-width: 400px;
+}
+
+.hero article img {
+    float: right;
+    width: 125px;
+    margin: 0 0 8px 12px;
+    border-radius: 4px;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.hero article p {
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+/* ===== Seções ===== */
+section h2 {
+    margin-bottom: 12px;
+}
+
+section p {
+    line-height: 1.8;
+}
+
+/* ===== Footer ===== */
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+    border-top: 2px solid var(--cor-primaria);
+    margin-top: 32px;
+}
+
+.redes-sociais {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.redes-sociais a {
+    text-decoration: none;
+}
+
+.redes-sociais img {
+    width: 32px;
+    height: 32px;
+    transition: transform 0.2s;
+}
+
+.redes-sociais img:hover {
+    transform: scale(1.2);
+}
