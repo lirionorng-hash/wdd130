@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sobre Nós - Rio Bravo Rafting</title>
-    <meta name="description" content="Conheça a Rio Bravo Rafting: nossa história, missão e paixão por aventuras em corredeiras. Viva a emoção do white water rafting com segurança e guias experientes.">
+    <meta name="description" content="Conheça a Rio Bravo Rafting: nossa história, missão e paixão por corredeiras. Viva a emoção do rafting com segurança e guias experientes.">
     <meta name="author" content="Lirionor Nascimento Guimarães">
     <link rel="stylesheet" href="estilos/rafting.css">
 </head>
 <body>
     <header>
         <img src="imagens/logo.png" alt="Logotipo da Rio Bravo Rafting" class="logo">
-        <nav>
+        <nav aria-label="Navegação principal">
             <ul>
                 <li><a href="index.html">Página Inicial</a></li>
                 <li><a href="sobre.html">Sobre Nós</a></li>
@@ -28,39 +28,68 @@
             <article>
                 <img src="imagens/cliente-feliz.jpg" alt="Cliente feliz comemorando após um passeio de rafting">
                 <p>Nossa missão é proporcionar aventuras inesquecíveis em corredeiras,
-                unindo emoção, segurança e contato com a natureza. Lorem ipsum dolor sit
-                amet, consectetur adipisicing elit. Guiados por profissionais experientes,
-                transformamos cada descida em uma experiência única para aventureiros de
-                todos os níveis.</p>
+                unindo emoção, segurança e contato com a natureza. Guiados por
+                profissionais experientes, transformamos cada descida em uma experiência
+                única para aventureiros de todos os níveis.</p>
             </article>
         </div>
 
-        <section>
+        <section class="history">
             <h2>História</h2>
             <p>A Rio Bravo Rafting nasceu em 2010 do sonho de um grupo de amigos
-            apaixonados por esportes radicais. Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna
-            aliqua. Ao longo dos anos, nos tornamos referência em passeios de rafting,
-            recebendo milhares de visitantes em busca de adesão à aventura e ao
-            respeito pela natureza.</p>
+            apaixonados por esportes radicais, que enxergaram nas corredeiras da região
+            uma forma de unir adesão à aventura e respeito pela natureza.</p>
+            <img
+                src="imagens/rafting-aventura.jpg"
+                alt="Equipe de rafting reunida junto ao rio"
+                width="320"
+                height="220"
+                loading="lazy"
+            >
+            <p>Ao longo dos anos, tornamo-nos referência em passeios de rafting,
+            recebendo milhares de visitantes e oferecendo hoje uma estrutura completa,
+            com guias certificados e equipamentos de segurança para todos os níveis de
+            experiência.</p>
         </section>
 
-        <section>
+        <section class="adventures">
             <h2>A aventura está te esperando!</h2>
+            <div class="adventures-gallery">
+                <figure>
+                    <img src="imagens/aventura1.webp" alt="Bote descendo uma corredeira" width="240" height="160" loading="lazy">
+                    <figcaption>Salto do Rio Negro</figcaption>
+                </figure>
+                <figure>
+                    <img src="imagens/aventura2.webp" alt="Grupo remando em um rio" width="240" height="160" loading="lazy">
+                    <figcaption>Corredeira do Paranapanema</figcaption>
+                </figure>
+                <figure>
+                    <img src="imagens/aventura3.webp" alt="Bote navegando entre rochas" width="240" height="160" loading="lazy">
+                    <figcaption>Corredeira do Jacaré</figcaption>
+                </figure>
+                <figure>
+                    <img src="imagens/aventura4.webp" alt="Equipe atravessando águas rápidas" width="240" height="160" loading="lazy">
+                    <figcaption>Travessia das Águas</figcaption>
+                </figure>
+                <figure>
+                    <img src="imagens/aventura5.webp" alt="Bote próximo à margem do rio" width="240" height="160" loading="lazy">
+                    <figcaption>Expedição do Vale</figcaption>
+                </figure>
+            </div>
         </section>
     </main>
 
     <footer>
         <p>&copy; 2026 Rio Bravo Rafting — Lirionor Nascimento Guimarães</p>
-        <nav class="redes-sociais">
-            <a href="https://facebook.com">
-                <img src="imagens/facebook.svg" alt="Ícone do Facebook">
+        <nav class="redes-sociais" aria-label="Redes sociais">
+            <a href="https://www.facebook.com/" aria-label="Facebook">
+                <img src="imagens/facebook.svg" alt="" width="32" height="32">
             </a>
-            <a href="https://instagram.com">
-                <img src="imagens/instagram.svg" alt="Ícone do Instagram">
+            <a href="https://www.instagram.com/" aria-label="Instagram">
+                <img src="imagens/instagram.svg" alt="" width="32" height="32">
             </a>
-            <a href="https://tiktok.com">
-                <img src="imagens/tiktok.svg" alt="Ícone do TikTok">
+            <a href="https://www.tiktok.com/" aria-label="TikTok">
+                <img src="imagens/tiktok.svg" alt="" width="32" height="32">
             </a>
         </nav>
     </footer>
