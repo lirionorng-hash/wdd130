@@ -212,7 +212,7 @@ footer p {
     margin: 0;
 }
 
-footer .redes-sociais {
+footer .socialmedia {
     grid-column: 3;
     display: flex;
     justify-content: flex-end;
@@ -220,18 +220,18 @@ footer .redes-sociais {
     align-items: center;
 }
 
-footer .redes-sociais a {
+footer .socialmedia a {
     text-decoration: none;
 }
 
-footer .redes-sociais img {
+footer .socialmedia img {
     display: block;
     width: 32px;
     height: 32px;
     transition: transform 0.2s;
 }
 
-footer .redes-sociais img:hover {
+footer .socialmedia img:hover {
     transform: scale(1.2);
 }
 
@@ -258,10 +258,10 @@ footer .redes-sociais img:hover {
         justify-items: center;
     }
     footer p,
-    footer .redes-sociais {
+    footer .socialmedia {
         grid-column: 1;
     }
-    footer .redes-sociais {
+    footer .socialmedia {
         justify-content: center;
     }
 }
