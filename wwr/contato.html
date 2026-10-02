@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fale Conosco - Rio Bravo Rafting</title>
-    <meta name="description" content="Entre em contato com a Rio Bravo Rafting: endereco, telefone, e-mail, mapa e formulario para tirar duvidas sobre passeios e reservas de rafting.">
+    <meta name="description" content="Entre em contato com a Rio Bravo Rafting: endereço, telefone, e-mail, mapa e formulário para tirar dúvidas sobre passeios e reservas de rafting.">
     <meta name="author" content="Lirionor Nascimento Guimarães">
     <link rel="stylesheet" href="estilos/rafting.css">
 </head>
@@ -22,7 +22,7 @@
     </header>
 
     <main>
-        <h1>Fale Conosco</h1>
+        <h1>Fale Conosco - Rio Bravo Rafting</h1>
 
         <section class="contact-info">
             <h2>Nossas Informações</h2>
@@ -79,27 +79,27 @@
 
                 <fieldset>
                     <legend>Finalidade da mensagem</legend>
-                    <label class="radio-opcao" for="finalidade-geral">
-                        <input type="radio" id="finalidade-geral" name="finalidade" value="consulta-geral" checked>
-                        Consulta Geral
-                    </label>
-                    <label class="radio-opcao" for="finalidade-reserva">
-                        <input type="radio" id="finalidade-reserva" name="finalidade" value="reserva">
-                        Pergunta sobre Reserva
-                    </label>
-                    <label class="radio-opcao" for="finalidade-sugestao">
-                        <input type="radio" id="finalidade-sugestao" name="finalidade" value="sugestao">
-                        Sugestão de Site
-                    </label>
+                    <div class="radio-opcao">
+                        <input id="finalidade-geral" type="radio" name="finalidade" value="consulta-geral" checked>
+                        <label for="finalidade-geral">Consulta Geral</label>
+                    </div>
+                    <div class="radio-opcao">
+                        <input id="finalidade-reserva" type="radio" name="finalidade" value="reserva">
+                        <label for="finalidade-reserva">Pergunta sobre Reserva</label>
+                    </div>
+                    <div class="radio-opcao">
+                        <input id="finalidade-sugestao" type="radio" name="finalidade" value="sugestao">
+                        <label for="finalidade-sugestao">Sugestão de Site</label>
+                    </div>
                 </fieldset>
 
                 <label for="mensagem">Mensagem</label>
                 <textarea id="mensagem" name="mensagem" rows="5" placeholder="Escreva sua mensagem aqui..." required></textarea>
 
-                <label class="checkbox-opcao" for="newsletter">
-                    <input type="checkbox" id="newsletter" name="newsletter" value="sim">
-                    Quero receber a newsletter mensal
-                </label>
+                <div class="checkbox-opcao">
+                    <input id="newsletter" type="checkbox" name="newsletter" value="sim">
+                    <label for="newsletter">Quero receber a newsletter mensal</label>
+                </div>
 
                 <button type="submit" class="botao-enviar">Enviar mensagem</button>
             </form>
