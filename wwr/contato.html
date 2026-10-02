@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fale Conosco - Rio Bravo Rafting</title>
+    <meta name="description" content="Entre em contato com a Rio Bravo Rafting: endereco, telefone, e-mail, mapa e formulario para tirar duvidas sobre passeios e reservas de rafting.">
+    <meta name="author" content="Lirionor Nascimento Guimarães">
+    <link rel="stylesheet" href="estilos/rafting.css">
+</head>
+<body>
+    <header>
+        <img src="imagens/logo.png" alt="Logotipo da Rio Bravo Rafting" class="logo">
+        <nav aria-label="Navegação principal">
+            <ul>
+                <li><a href="index.html">Página Inicial</a></li>
+                <li><a href="sobre.html">Sobre Nós</a></li>
+                <li><a href="passeios.html">Passeios</a></li>
+                <li><a href="contato.html">Fale Conosco</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Fale Conosco</h1>
+
+        <section class="contact-info">
+            <h2>Nossas Informações</h2>
+            <div class="contact-grid">
+                <address>
+                    <p><strong>Endereço:</strong><br>
+                    Av. das Corredeiras, 1500 - Centro<br>
+                    Brotas - SP, 17380-000</p>
+                    <p><strong>Telefones:</strong><br>
+                    <a href="tel:+551433560000">(14) 3356-0000</a><br>
+                    <a href="tel:+5514999990000">(14) 99999-0000</a></p>
+                    <p><strong>E-mail:</strong><br>
+                    <a href="mailto:contato@riobravorafting.com.br">contato@riobravorafting.com.br</a></p>
+                </address>
+                <iframe
+                    class="mapa"
+                    src="https://www.google.com/maps?q=Brotas,SP&output=embed"
+                    title="Mapa da localização da Rio Bravo Rafting em Brotas - SP"
+                    width="400"
+                    height="300"
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </section>
+
+        <section class="team">
+            <h2>Nossa Equipe</h2>
+            <div class="team-gallery">
+                <figure>
+                    <img src="imagens/funcionario1.webp" alt="Retrato de Ricardo Alves" width="200" height="200" loading="lazy">
+                    <figcaption><strong>Ricardo Alves</strong><br>Guia-Chefe de Rafting</figcaption>
+                </figure>
+                <figure>
+                    <img src="imagens/funcionario2.webp" alt="Retrato de Mariana Costa" width="200" height="200" loading="lazy">
+                    <figcaption><strong>Mariana Costa</strong><br>Instrutora de Aventura</figcaption>
+                </figure>
+                <figure>
+                    <img src="imagens/funcionario3.webp" alt="Retrato de Bruno Henrique" width="200" height="200" loading="lazy">
+                    <figcaption><strong>Bruno Henrique</strong><br>Coordenador de Segurança</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section class="contact-form">
+            <h2>Envie sua Mensagem</h2>
+            <form method="post" action="#">
+                <label for="nome">Nome</label>
+                <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required>
+
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" placeholder="voce@exemplo.com" required>
+
+                <fieldset>
+                    <legend>Finalidade da mensagem</legend>
+                    <label class="radio-opcao">
+                        <input type="radio" name="finalidade" value="consulta-geral" checked>
+                        Consulta Geral
+                    </label>
+                    <label class="radio-opcao">
+                        <input type="radio" name="finalidade" value="reserva">
+                        Pergunta sobre Reserva
+                    </label>
+                    <label class="radio-opcao">
+                        <input type="radio" name="finalidade" value="sugestao">
+                        Sugestão de Site
+                    </label>
+                </fieldset>
+
+                <label for="mensagem">Mensagem</label>
+                <textarea id="mensagem" name="mensagem" rows="5" placeholder="Escreva sua mensagem aqui..." required></textarea>
+
+                <label class="checkbox-opcao">
+                    <input type="checkbox" name="newsletter" value="sim">
+                    Quero receber a newsletter mensal
+                </label>
+
+                <button type="submit" class="botao-enviar">Enviar mensagem</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Rio Bravo Rafting — Lirionor Nascimento Guimarães</p>
+        <nav class="socialmedia" aria-label="Redes sociais">
+            <a href="https://www.facebook.com/">
+                <img src="imagens/facebook.svg" alt="Ícone do Facebook" width="32" height="32">
+            </a>
+            <a href="https://www.instagram.com/">
+                <img src="imagens/instagram.svg" alt="Ícone do Instagram" width="32" height="32">
+            </a>
+            <a href="https://www.tiktok.com/">
+                <img src="imagens/tiktok.svg" alt="Ícone do TikTok" width="32" height="32">
+            </a>
+        </nav>
+    </footer>
+</body>
+</html>
