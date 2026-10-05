@@ -240,87 +240,72 @@ main > h1 {
     margin: 24px 16px 8px;
 }
 
-/* ===== Informações de contato (endereço + mapa) ===== */
-.contact-grid {
+/* ===== Mapa + Info/Form (duas colunas, wireframe S05) ===== */
+.contact-map-form {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1.5rem;
+    padding: 2rem;
     align-items: start;
-    margin-top: 1rem;
 }
 
-.contact-grid address {
+.contact-left {
+    min-height: 500px;
+}
+
+.mapa {
+    width: 100%;
+    height: 100%;
+    min-height: 500px;
+    border: 2px solid var(--cor-primaria);
+    border-radius: 0.4rem;
+}
+
+.contact-right {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.contact-right address {
     font-style: normal;
     line-height: 1.8;
 }
 
-.contact-grid address a {
+.contact-right address h2 {
+    margin: 0 0 8px;
+    text-align: left;
+}
+
+.contact-right address p {
+    margin: 4px 0;
+}
+
+.contact-right address a {
     color: var(--cor-primaria);
     font-weight: bold;
     text-decoration: none;
 }
 
-.contact-grid address a:hover {
+.contact-right address a:hover {
     text-decoration: underline;
 }
 
-.mapa {
-    width: 100%;
-    height: 300px;
-    border: 2px solid var(--cor-primaria);
-    border-radius: 0.4rem;
-}
-
-/* ===== Equipe (três funcionários) ===== */
-.team {
-    text-align: center;
-}
-
-.team-gallery {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 1.5rem;
-    margin-top: 1.5rem;
-}
-
-.team-gallery figure {
-    min-width: 0;
-    margin: 0;
-}
-
-.team-gallery img {
-    display: block;
-    width: 100%;
-    max-width: 200px;
-    margin: 0 auto;
-    aspect-ratio: 1 / 1;
-    object-fit: cover;
-    border-radius: 50%;
-    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
-}
-
-.team-gallery figcaption {
-    margin-top: 0.75rem;
-    line-height: 1.5;
-}
-
-/* ===== Formulário de contato ===== */
-.contact-form form {
+/* ===== Formulário de contato (coluna direita) ===== */
+.contact-right form {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-    max-width: 520px;
-    margin: 1rem auto 0;
 }
 
-.contact-form label {
+.contact-right label {
     font-weight: bold;
     margin-top: 0.5rem;
 }
 
-.contact-form input[type="text"],
-.contact-form input[type="email"],
-.contact-form textarea {
+.contact-right input[type="text"],
+.contact-right input[type="email"],
+.contact-right textarea {
     width: 100%;
     padding: 0.6rem;
     border: 1px solid var(--cor-primaria);
@@ -329,14 +314,14 @@ main > h1 {
     font-size: 1rem;
 }
 
-.contact-form fieldset {
+.contact-right fieldset {
     border: 1px solid var(--cor-primaria);
     border-radius: 0.4rem;
     padding: 0.75rem 1rem;
     margin-top: 0.5rem;
 }
 
-.contact-form legend {
+.contact-right legend {
     font-weight: bold;
     color: var(--cor-primaria);
     padding: 0 0.4rem;
@@ -369,10 +354,47 @@ main > h1 {
     transform: scale(1.03);
 }
 
+/* ===== Equipe (três funcionários, abaixo do mapa+form) ===== */
+.team {
+    text-align: center;
+    padding: 2rem;
+}
+
+.team-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.team-gallery figure {
+    min-width: 0;
+    margin: 0;
+}
+
+.team-gallery img {
+    display: block;
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.team-gallery figcaption {
+    margin-top: 0.75rem;
+    line-height: 1.5;
+}
+
 /* ===== Responsividade ===== */
 @media (max-width: 800px) {
-    .contact-grid {
+    .contact-map-form {
         grid-template-columns: 1fr;
+    }
+    .contact-left {
+        min-height: 300px;
     }
     .team-gallery {
         grid-template-columns: 1fr;
