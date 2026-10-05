@@ -285,6 +285,7 @@ main > h1 {
     color: var(--cor-primaria);
     font-weight: bold;
     text-decoration: none;
+    overflow-wrap: anywhere;
 }
 
 .contact-right address a:hover {
@@ -295,10 +296,6 @@ main > h1 {
 .contact-left,
 .contact-right {
     min-width: 0;
-}
-
-.contact-right address a {
-    overflow-wrap: anywhere;
 }
 
 /* ===== Formulário de contato (coluna direita) ===== */
