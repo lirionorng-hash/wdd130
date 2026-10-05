@@ -16,7 +16,7 @@
                 <li><a href="index.html">Página Inicial</a></li>
                 <li><a href="sobre.html">Sobre Nós</a></li>
                 <li><a href="passeios.html">Passeios</a></li>
-                <li><a href="contato.html">Fale Conosco</a></li>
+                <li><a href="contato.html" aria-current="page">Fale Conosco</a></li>
             </ul>
         </nav>
     </header>
@@ -24,13 +24,13 @@
     <main>
         <h1>Fale Conosco - Rio Bravo Rafting</h1>
 
-        <section class="contact-map-form">
+        <section class="contact-map-form" aria-labelledby="titulo-contato">
             <div class="contact-left">
                 <iframe
                     class="mapa"
                     src="https://www.google.com/maps?q=Brotas,SP&output=embed"
                     title="Mapa da localização da Rio Bravo Rafting em Brotas - SP"
-                    width="400"
+                    width="600"
                     height="500"
                     loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade"
@@ -38,8 +38,7 @@
                 </iframe>
             </div>
             <div class="contact-right">
-                <div class="contact-info">
-                <h2>Rio Bravo Rafting</h2>
+                <h2 id="titulo-contato">Rio Bravo Rafting</h2>
                 <address>
                     <p><strong>Endereço:</strong><br>
                     Av. das Corredeiras, 1500 - Centro<br>
@@ -50,7 +49,6 @@
                     <p><strong>E-mail:</strong><br>
                     <a href="mailto:contato@riobravorafting.com.br">contato@riobravorafting.com.br</a></p>
                 </address>
-            </div>
 
                 <form method="post" action="#">
                     <label for="nome">Nome</label>

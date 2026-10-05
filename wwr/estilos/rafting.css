@@ -267,14 +267,14 @@ main > h1 {
     gap: 1.5rem;
 }
 
-.contact-info h2 {
-    margin: 0 0 8px;
-    text-align: left;
-}
-
 .contact-right address {
     font-style: normal;
     line-height: 1.8;
+}
+
+.contact-right > h2 {
+    margin: 0 0 8px;
+    text-align: left;
 }
 
 .contact-right address p {
@@ -289,6 +289,16 @@ main > h1 {
 
 .contact-right address a:hover {
     text-decoration: underline;
+}
+
+/* Permite que os dados de contato caibam em telas estreitas. */
+.contact-left,
+.contact-right {
+    min-width: 0;
+}
+
+.contact-right address a {
+    overflow-wrap: anywhere;
 }
 
 /* ===== Formulário de contato (coluna direita) ===== */
