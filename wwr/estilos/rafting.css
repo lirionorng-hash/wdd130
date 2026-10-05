@@ -267,14 +267,14 @@ main > h1 {
     gap: 1.5rem;
 }
 
+.contact-info h2 {
+    margin: 0 0 8px;
+    text-align: left;
+}
+
 .contact-right address {
     font-style: normal;
     line-height: 1.8;
-}
-
-.contact-right address h2 {
-    margin: 0 0 8px;
-    text-align: left;
 }
 
 .contact-right address p {
