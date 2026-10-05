@@ -411,10 +411,3 @@ main > h1 {
         grid-template-columns: 1fr;
     }
 }
-
-/* Rótulos explícitos dos grupos de opções do formulário. */
-.contact-form .radio-opcao label,
-.contact-form .checkbox-opcao label {
-    margin-top: 0;
-    font-weight: normal;
-}
