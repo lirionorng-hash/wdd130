@@ -1,8 +1,17 @@
-/* ===== Variáveis CSS ===== */
+/* =========================================================
+   Rio Bravo Rafting - folha de estilo unica do site (rafting.css)
+   Autor: Lirionor Nascimento Guimaraes
+   Paginas: index.html, sobre.html, passeios.html, contato.html
+   ========================================================= */
+
+/* ===== Variaveis CSS ===== */
 :root {
     --cor-primaria: #0b5394;
+    --cor-primaria-escura: #073763;
     --cor-destaque1: #1a1a2e;
     --cor-destaque2: #e8f0fe;
+    --cor-acento: #c2410c;
+    --branco: #ffffff;
     --fonte-titulo: 'Georgia', serif;
     --fonte-body: 'Helvetica Neue', Arial, sans-serif;
 }
@@ -18,29 +27,55 @@
 body {
     font-family: var(--fonte-body);
     color: var(--cor-destaque1);
+    background-color: var(--branco);
+    line-height: 1.6;
 }
 
-/* ===== Largura e centralização ===== */
+/* ===== Largura e centralizacao ===== */
 header, main, footer {
-    width: 840px;
+    width: 960px;
     max-width: 100%;
     margin: 0 auto;
 }
 
-/* ===== Títulos ===== */
-h1, h2 {
+/* ===== Titulos ===== */
+h1, h2, h3 {
     font-family: var(--fonte-titulo);
     color: var(--cor-primaria);
+}
+
+h1, h2 {
     text-align: center;
 }
 
-/* ===== Margens e paddings básicos ===== */
+/* ===== Margens e paddings basicos ===== */
 p, section, article {
     margin: 16px;
     padding: 8px;
 }
 
-/* ===== Header (Grid: logo + navegação) ===== */
+/* ===== Botao reutilizavel (CTA / envio) ===== */
+.btn {
+    display: inline-block;
+    padding: 0.8rem 1.6rem;
+    background-color: var(--cor-primaria);
+    color: var(--branco);
+    font-weight: bold;
+    text-decoration: none;
+    border: none;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.btn:hover,
+.btn:focus {
+    background-color: var(--cor-primaria-escura);
+    transform: translateY(-2px);
+}
+
+/* ===== Header (Grid: logo + navegacao) ===== */
 header {
     display: grid;
     grid-template-columns: 120px 1fr;
@@ -55,7 +90,7 @@ header > img.logo {
     height: auto;
 }
 
-/* ===== Navegação (Flex à direita) ===== */
+/* ===== Navegacao (Flex a direita) ===== */
 header nav ul {
     list-style: none;
     display: flex;
@@ -73,11 +108,12 @@ header nav a {
     font-weight: bold;
 }
 
-header nav a:hover {
+header nav a:hover,
+header nav a:focus {
     text-decoration: underline;
 }
 
-/* ===== Hero div ===== */
+/* ===== Hero div (comum a index e sobre) ===== */
 .hero {
     position: relative;
 }
@@ -88,25 +124,24 @@ header nav a:hover {
     height: auto;
 }
 
-/* ===== Hero h1 (sobreposição) ===== */
+/* ===== Hero h1 (sobreposicao) ===== */
 .hero h1 {
     position: absolute;
     top: 20px;
     width: 100%;
     padding: 16px;
     text-align: center;
-    opacity: 0.7;
-    background-color: var(--cor-destaque1);
-    color: #ffffff;
+    background-color: rgba(26, 26, 46, 0.75);
+    color: var(--branco);
     font-size: 1.8rem;
 }
 
-/* ===== Hero article (sobreposição) ===== */
+/* ===== Hero article (sobreposicao - usado em sobre.html) ===== */
 .hero article {
     position: absolute;
     bottom: 40px;
     right: 40px;
-    background-color: rgba(255, 255, 255, 0.85);
+    background-color: rgba(255, 255, 255, 0.9);
     padding: 16px;
     border-radius: 8px;
     max-width: 400px;
@@ -120,12 +155,19 @@ header nav a:hover {
     box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
 }
 
+.hero article h2 {
+    font-family: var(--fonte-titulo);
+    color: var(--cor-primaria-escura);
+    font-size: 1.15rem;
+    margin-bottom: 8px;
+}
+
 .hero article p {
     line-height: 1.6;
     font-size: 0.95rem;
 }
 
-/* ===== Seções (base) ===== */
+/* ===== Seccoes (base) ===== */
 section {
     background-color: var(--cor-destaque2);
     border-radius: 8px;
@@ -139,7 +181,95 @@ section p {
     line-height: 1.8;
 }
 
-/* ===== História (texto – imagem – texto) ===== */
+/* =========================================================
+   PAGINA INICIAL (index.html)
+   ========================================================= */
+
+/* Chamada para acao destacada */
+.cta {
+    text-align: center;
+    padding: 2rem;
+}
+
+.cta p {
+    margin: 0 auto 1.2rem;
+    max-width: 640px;
+}
+
+/* Grid de destaques: imagem + conteudo (CSS Grid, nunca coluna unica) */
+.destaques {
+    padding: 2rem;
+}
+
+.destaques-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.cartao {
+    background-color: var(--branco);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+    display: flex;
+    flex-direction: column;
+}
+
+.cartao img {
+    display: block;
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+}
+
+.cartao h3 {
+    margin: 0.8rem 1rem 0.4rem;
+}
+
+.cartao p {
+    margin: 0 1rem 1rem;
+    font-size: 0.95rem;
+}
+
+/* Formulario de newsletter */
+.newsletter {
+    padding: 2rem;
+}
+
+.newsletter form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    max-width: 640px;
+    margin: 1.2rem auto 0;
+    align-items: end;
+}
+
+.newsletter label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.3rem;
+    color: var(--cor-primaria-escura);
+}
+
+.newsletter input {
+    width: 100%;
+    padding: 0.6rem;
+    border: 1px solid #9aa6b5;
+    border-radius: 0.3rem;
+    font-size: 1rem;
+}
+
+.newsletter .btn {
+    grid-column: 1 / -1;
+    justify-self: center;
+}
+
+/* =========================================================
+   HISTORIA / AVENTURAS (sobre.html)
+   ========================================================= */
 .history {
     display: grid;
     grid-template-columns: 1fr minmax(180px, 280px) 1fr;
@@ -165,7 +295,6 @@ section p {
     margin: 0;
 }
 
-/* ===== Aventuras (cinco figuras) ===== */
 .adventures {
     padding: 2rem;
     text-align: center;
@@ -186,7 +315,7 @@ section p {
 .adventures-gallery img {
     display: block;
     width: 100%;
-    aspect-ratio: 3 / 2;
+    height: 130px;
     object-fit: cover;
     border-radius: 0.4rem;
 }
@@ -195,7 +324,229 @@ section p {
     margin-top: 0.5rem;
 }
 
-/* ===== Footer (Grid: texto centralizado + ícones à direita) ===== */
+/* =========================================================
+   PAGINA PASSEIOS (passeios.html)
+   ========================================================= */
+
+.passeios-intro {
+    text-align: center;
+    padding: 2rem;
+}
+
+.passeios-intro p {
+    max-width: 680px;
+    margin: 0 auto 1.2rem;
+}
+
+/* Cartoes de passeio: foto + descricao, alternando lados (grid) */
+.passeios-lista {
+    padding: 1rem;
+    background-color: transparent;
+}
+
+.passeio {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    align-items: center;
+    background-color: var(--cor-destaque2);
+    border-radius: 0.6rem;
+    padding: 1.5rem;
+    margin: 0 0 1.5rem;
+}
+
+.passeio:nth-child(even) .passeio-foto {
+    order: 2;
+}
+
+.passeio-foto {
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-height: 280px;
+    object-fit: cover;
+    border-radius: 0.5rem;
+}
+
+.passeio h3 {
+    margin-bottom: 0.6rem;
+}
+
+.passeio ul {
+    margin: 0.8rem 0 0 1.2rem;
+}
+
+/* Tabela de passeios */
+.tabela-passeios {
+    padding: 2rem;
+}
+
+.tabela-passeios table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1.2rem;
+    background-color: var(--branco);
+    border-radius: 0.4rem;
+    overflow: hidden;
+}
+
+.tabela-passeios caption {
+    font-weight: bold;
+    margin-bottom: 0.8rem;
+    color: var(--cor-primaria);
+}
+
+.tabela-passeios th,
+.tabela-passeios td {
+    border: 1px solid #c3cedd;
+    padding: 0.7rem 0.9rem;
+    text-align: left;
+}
+
+.tabela-passeios thead th {
+    background-color: var(--cor-primaria);
+    color: var(--branco);
+}
+
+.tabela-passeios tbody tr:nth-child(even) {
+    background-color: var(--cor-destaque2);
+}
+
+/* =========================================================
+   PAGINA FALE CONOSCO (contato.html)
+   ========================================================= */
+
+.contact-map-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    padding: 2rem;
+    align-items: start;
+}
+
+.contact-map-form h2 {
+    grid-column: 1 / -1;
+}
+
+.mapa {
+    width: 100%;
+    min-height: 320px;
+    border: 0;
+    border-radius: 0.5rem;
+}
+
+.info-contato {
+    background-color: var(--branco);
+    border-radius: 0.5rem;
+    padding: 1.2rem;
+    margin: 0;
+}
+
+.info-contato address {
+    font-style: normal;
+    line-height: 1.9;
+}
+
+.info-contato a {
+    color: var(--cor-primaria);
+    font-weight: bold;
+}
+
+/* Formulario de contato */
+.form-contato {
+    grid-column: 1 / -1;
+    background-color: var(--branco);
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    margin: 0;
+}
+
+.form-contato .campo {
+    margin-bottom: 1rem;
+}
+
+.form-contato label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.3rem;
+    color: var(--cor-primaria-escura);
+}
+
+.form-contato input[type="text"],
+.form-contato input[type="email"],
+.form-contato textarea {
+    width: 100%;
+    padding: 0.6rem;
+    border: 1px solid #9aa6b5;
+    border-radius: 0.3rem;
+    font-size: 1rem;
+    font-family: inherit;
+}
+
+.form-contato fieldset {
+    border: 1px solid #c3cedd;
+    border-radius: 0.4rem;
+    padding: 0.8rem 1rem;
+}
+
+.form-contato legend {
+    font-weight: bold;
+    color: var(--cor-primaria-escura);
+    padding: 0 0.4rem;
+}
+
+.form-contato .opcao {
+    font-weight: normal;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin: 0.3rem 0;
+}
+
+.form-contato .opcao input {
+    width: auto;
+}
+
+/* Galeria da equipe */
+.equipe {
+    padding: 2rem;
+    text-align: center;
+}
+
+.equipe-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.equipe figure {
+    margin: 0;
+    background-color: var(--branco);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+.equipe img {
+    display: block;
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+}
+
+.equipe figcaption {
+    padding: 0.8rem;
+}
+
+.equipe figcaption strong {
+    display: block;
+    color: var(--cor-primaria);
+}
+
+/* =========================================================
+   FOOTER (comum a todas as paginas)
+   ========================================================= */
 footer {
     display: grid;
     grid-template-columns: 1fr auto 1fr;
@@ -235,8 +586,10 @@ footer .socialmedia img:hover {
     transform: scale(1.2);
 }
 
-/* ===== Responsividade ===== */
-@media (max-width: 800px) {
+/* =========================================================
+   RESPONSIVIDADE
+   ========================================================= */
+@media (max-width: 900px) {
     header {
         grid-template-columns: 1fr;
         justify-items: center;
@@ -253,6 +606,21 @@ footer .socialmedia img:hover {
     .adventures-gallery {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
+    .destaques-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .equipe-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .passeio {
+        grid-template-columns: 1fr;
+    }
+    .passeio:nth-child(even) .passeio-foto {
+        order: 0;
+    }
+    .contact-map-form {
+        grid-template-columns: 1fr;
+    }
     footer {
         grid-template-columns: 1fr;
         justify-items: center;
@@ -266,8 +634,16 @@ footer .socialmedia img:hover {
     }
 }
 
-@media (max-width: 480px) {
-    .adventures-gallery {
+@media (max-width: 540px) {
+    .adventures-gallery,
+    .destaques-grid,
+    .equipe-grid {
         grid-template-columns: 1fr;
+    }
+    .newsletter form {
+        grid-template-columns: 1fr;
+    }
+    .hero h1 {
+        font-size: 1.3rem;
     }
 }
